@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Test</title>
+    <script type="text/javascript">
+        
+        const setTimer = () => {
+
+            const interval = parseInt(document.getElementById('timeout').value);
+            const timerSet = Date.now();
+
+            setTimeout(function () {
+
+                const timerRun = Date.now();
+                const log = `<br><br>
+                Set : ${new Date(timerSet)} <br>
+                Run : ${new Date(timerRun)} <br>
+                Int : ${interval}
+                <br<br>`;
+                document.getElementById('logs').innerHTML += log 
+                
+            }, 1000 * interval)
+
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="number" id="timeout" value="60">
+    <br>
+    <br>
+    <button onclick="setTimer()">Set Timeout</button>
+    <hr>
+    <div id="logs"></div>
+</body>
+</html>
