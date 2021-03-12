@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Crash</title>
+    <script type="text/javascript">
+        
+        let s = {};
+        let i = 0;
+        const loop = () => {
+
+            while(true) {
+                s[i++] = 'a';
+            }
+
+        }
+        
+    </script>
+</head>
+<body>
+    <hr>
+    <button onclick="loop()">Crash</button>
+    <input type="text" name="">
+    <hr>
+</body>
+</html>
