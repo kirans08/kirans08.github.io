@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Service Worker Support Test</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script type="text/javascript">
+        document.getElementById('result').innerHTML = (navigator && navigator.serviceWorker) ? "Service Woker is supported" : "Service Worker is not supported";
+    </script>
+</body>
+</html>
