@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Iframe Embed Test</title>
+</head>
+<style type="text/css">
+
+    section {
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .input-row > label {
+        display: inline-block;
+        min-width: 100px;
+    }
+    .input-row > input {
+        display: inline-block;
+        min-width: 400px;
+    }
+
+    .input-row {
+        padding: 5px;
+    }
+
+</style>
+<body>
+
+    <section>
+        <div class="input-row">
+            <label for="embed-url">URL :</label>
+            <input type="url" id="embed-url" name="embed-url">
+        </div>
+        <div class="input-row">
+            <label for="width">Width :</label>
+            <input type="number" id="width" name="width" value="800">
+        </div>
+        <div class="input-row">
+            <label for="height">Height :</label>
+            <input type="number" id="height" name="height" value="400">
+        </div>
+        <div class="input-row">
+            <button onclick="embed()">Embedd</button>
+        </div>
+    </section>
+
+    <main id="embed-content">
+        
+    </main>
+
+
+    <script type="text/javascript">
+
+        let count = 1;
+
+        function embed() {
+            
+            const url = document.getElementById("embed-url").value;
+            const width = document.getElementById("width").value;
+            const height = document.getElementById("height").value;
+
+            const template = `
+                <section>
+                    <h1>URL - ${count++}</h1>
+                    <p>URL : <span>${url}</span></p>
+                    <iframe src="${url}" width="${width}" height="${height}"></iframe>
+                </section>
+            `;
+
+            const container = document.getElementById("embed-content");
+
+            container.innerHTML = template;
+
+        }
+
+    </script>
+</body>
+</html>
