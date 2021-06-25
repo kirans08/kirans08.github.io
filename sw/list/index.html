@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html manifest="manifest.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Service Worker</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="ui-controller.js"></script>
+    <script src="plugin.js"></script>
+    <script>
+        (function () {
+            window.addEventListener('load', function () {
+                var plugin = new OfscPlugin(true);
+                plugin.init();
+            })
+        })();
+    </script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body id="ofscPluginBody">
+    <header class="header">
+        <h1 class="header__title">Service Worker Test</h1>
+    </header>
+    <main class="content">
+        <div class="content__controls">
+            <h3>Load the Active Service Workers</h3>
+            <button id="fetch-sw">Load SW</button> 
+            <button id="test-xhr">Test Fetch</button> 
+        </div>
+        <section class="content__sw-list">
+            <table id="sw-list-table">
+            </table>
+        </section>
+    </main>
+
+
+</body>
+
+</html>

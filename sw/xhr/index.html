@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html manifest="manifest.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample Hosted Plugin</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="controller.js"></script>
+    <script src="plugin.js"></script>
+    <script>
+        (function () {
+            window.addEventListener('load', function () {
+                var plugin = new OfscPlugin(true);
+                plugin.init();
+            })
+        })();
+    </script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden
+        }
+    </style>
+</head>
+
+<body id="ofscPluginBody">
+    <main class="content">
+        <header>
+            <h1>Service Worker Test</h1>
+        </header>
+        <section>
+                <h3><span id="status-text">Offline</span><span id="status-icon" class="offline"></span></h3>
+        </section>
+        <section>
+                <h3>Test Scenarios</h3>
+                <button id="fetch-cached">Fetch Cached</button>
+                <button id="fetch-uncached">Fetch Uncached</button>
+        </section>
+        <section class="content__result">
+        </section>
+    </main>
+</body>
+
+</html>

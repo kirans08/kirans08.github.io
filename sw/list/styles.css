@@ -1,0 +1,53 @@
+
+body {
+
+  font-size: 16px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  width: 100%;
+
+}
+
+button {
+    font-size: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 100px;
+    background: #fff;
+    height: 30px;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.content {
+    padding: 0 40px;
+}
+
+.content__sw-list {
+    margin-top: 20px;
+}
+
+
+#fetch-sw:hover {
+    background: #efefef;
+}
+
+#fetch-sw:focus {
+    outline: none;
+}
+
+.no-data-message {
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
